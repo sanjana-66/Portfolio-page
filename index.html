@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kandukuri Sanjana | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+
+        nav {
+            background-color: #1e293b;
+            padding: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Home Section */
+
+        #home {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+            padding: 30px;
+        }
+
+        .home-content h1 {
+            font-size: 48px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .home-content h2 {
+            color: #0284c7;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0284c7;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #0369a1;
+        }
+
+        /* Common Section */
+
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: #1e293b;
+        }
+
+        /* About */
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Education */
+
+        .education-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .education-card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .education-card h3 {
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-weight: bold;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Projects */
+
+        .projects-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-card {
+            background-color: white;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #0284c7;
+            margin-bottom: 15px;
+        }
+
+        /* Internship */
+
+        .internship {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .internship h3 {
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        /* Achievements */
+
+        .achievement-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .achievement {
+            background-color: white;
+            width: 280px;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .achievement h3 {
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            background-color: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .home-content h1 {
+                font-size: 35px;
+            }
+
+            .home-content h2 {
+                font-size: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#internship">Internship</a>
+            </li>
+
+            <li>
+                <a href="#achievements">Achievements</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Home -->
+
+    <section id="home">
+
+        <div class="home-content">
+
+            <h1>Kandukuri Sanjana</h1>
+
+            <h2>MCA Student | Aspiring Software Developer</h2>
+
+            <p>
+                Welcome to my personal portfolio website.
+            </p>
+
+            <a href="#about" class="btn">
+                Explore My Portfolio
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                Hello! I am Kandukuri Sanjana, currently pursuing
+                Master of Computer Applications (MCA) at RVR & JC
+                College of Engineering.
+            </p>
+
+            <p>
+                I have completed my Bachelor of Science (B.Sc) in
+                Mathematics, Statistics and Computer Science (MSCs)
+                from Krishnaveni Degree College for Women.
+            </p>
+
+            <p>
+                I am interested in web development, programming and
+                building useful software applications. I have
+                technical knowledge in HTML, CSS, JavaScript and Python.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-container">
+
+
+            <div class="education-card">
+
+                <h3>MCA</h3>
+
+                <p>
+                    RVR & JC College of Engineering
+                </p>
+
+                <p>
+                    Currently Pursuing
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>B.Sc (MSCs)</h3>
+
+                <p>
+                    Krishnaveni Degree College for Women
+                </p>
+
+                <p>
+                    Mathematics, Statistics & Computer Science
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>Intermediate (MEC)</h3>
+
+                <p>
+                    Model School, Karempudi
+                </p>
+
+                <p>
+                    Mathematics, Economics & Commerce
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                HTML
+            </div>
+
+            <div class="skill">
+                CSS
+            </div>
+
+            <div class="skill">
+                JavaScript
+            </div>
+
+            <div class="skill">
+                Python
+            </div>
+
+            <div class="skill">
+                Web Development
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>My Project</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+
+                <h3>Library Management System</h3>
+
+                <p>
+                    I developed a mini project called
+                    <strong>Library Management System</strong>.
+                </p>
+
+                <p>
+                    The project is designed to help manage library
+                    information such as books, students and
+                    library records in an organized way.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Project Type:</strong>
+                    Mini Project
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Internship -->
+
+    <section id="internship">
+
+        <h2>Internship</h2>
+
+        <div class="internship">
+
+            <h3>Foundary AI Labs</h3>
+
+            <p>
+                I completed an internship at
+                <strong>Foundary AI Labs</strong>.
+            </p>
+
+            <p>
+                The internship helped me gain practical exposure
+                and improve my technical skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Achievements -->
+
+    <section id="achievements">
+
+        <h2>Achievements & Certificates</h2>
+
+        <div class="achievement-container">
+
+
+            <div class="achievement">
+
+                <h3>🥋 Karate Certificate</h3>
+
+                <p>
+                    Successfully completed Karate certification.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>🏆 Bronze Medal</h3>
+
+                <p>
+                    Won a Bronze Medal in Karate Championship.
+                </p>
+
+            </div>
+
+
+            <div class="achievement">
+
+                <h3>📜 Unnati Certificate</h3>
+
+                <p>
+                    Received an Unnati Certificate.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+
+            <p>
+                📞 Phone:
+                <strong>8097689099</strong>
+            </p>
+
+            <p>
+                💻 GitHub:
+                <a href="https://github.com/sanjana-66"
+                   target="_blank">
+                    github.com/sanjana-66
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Kandukuri Sanjana | Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
